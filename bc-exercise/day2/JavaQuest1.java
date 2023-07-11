@@ -13,7 +13,7 @@
  * The variable dnumber is -20.5
  * The variable reminder is 1
  * The variable result is 3
- */
+ */ 
 // Primitive types and operators
 public class JavaQuest1 {
 
