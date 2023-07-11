@@ -75,7 +75,7 @@ public class datatype{
 
   //比較特別既Operator (+=   -=   *=   /=)
   int num5 = 10;
-  num5-=1;    //WHAT'S THAT？？？ 佢呢個符號代表佢會自己減1
+  num5-=1;    //WHAT'S THAT？？？ 呢個符號代表佢會自己減1
   // num5 = num5 - 1
   //頭先有講過 variable 由右到左，所以打完呢句後num5 既value就會由15跌落14
   num5+=2;     //一樣, 頭先因上面既num5-=1, ，而家num5係14
