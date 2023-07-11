@@ -4,14 +4,11 @@ public class datatype{
   public static void main(String[] args){
     //要programme 顯示一D資料既magic word
     System.out.println("afa"); //顯示文字必加 " "  同埋句尾必加 ; 
-    System.out.print("hello"); //都係顯示資訊，但不同就係顯示完不會幫你去下一行
-    System.out.println();      //咩都冇，直接跳下一行
 
     //variable type//
     //variable 即係電腦既memory 只要你set好左例如成年係18歲，以後你講成年就係18歲
     //而呢種資訊可以分為文字同數字，所以我地會有唔同既variable/data
-  /* Primitive Variable             Reference Variable
-     no need to know what are the differences between primitive & reference at this moment
+  /* 
      int      數字(整數) 最常用        String     文字/句子
      byte     數字(整數) 極少用
      short    數字(整數) 極少用
@@ -23,19 +20,19 @@ public class datatype{
   */
 
   //當我地想set data時候，我地要先講明我地會set咩類型既data,如下：
-    int adultAge = 18; //18歲就叫成年  (btw其實adultAge任你寫，你寫佢咩abc名都得)
-    String myName = "李卓謙"; //只有文字或者字母需要有 "" / ''
-  //其他很少用，但都要知係咩野
+    int adultAge = 18; //18歲就叫成年  (adultAge任你寫，你寫佢咩abc名都得)
+    String myName = "李卓謙"; //只有文字或者字母需要有符號 "" / ''
     float pie = 3.14f; //float 同 double 都係小數，但如果只需幾個小數位，就用float
   //記得float 數字後要加 f
+    double pie2 = 3.14161434;
   //點解有時會 int age; 再age = 18; 但呢度一句過?
-  //其實兩行咁寫同一行寫其實完全一樣，所以唔需要懷疑人生
+  //其實兩行咁寫同一行寫其實完全一樣
   
-  //咁點樣用返D data 出黎呢
+  //點用返D data 出黎
   System.out.println(adultAge);   
   //只要寫返輸出文字既magic word 再括弧內加返variable名就可
   System.out.println("Hello, I am "+myName+". Nice to meet you!");
-  //因為我地已set好左 myName 所以佢唔好放係 " " 裹面，佢會直接打出myName
+  //因為已set好左 myName 所以佢唔好放係 " " 裹面，if 寫裹面佢會直接打出myName
   //加號就係想輸出埋呢 D 資料，咁就用加號串連埋一齊顯示
   //而家會試一下將幾個 data 一齊顯示出黎
   System.out.println("Hello, My name is "+myName+". I am "+adultAge+" years old. I am an adult.");
@@ -47,19 +44,18 @@ public class datatype{
   System.out.println(8*5); // *乘
   System.out.println(8/2); // /除
   System.out.println(8%3); // %餘數係咩，8除以3，餘數係2
-  //其實加減乘除可混合使用都得，另外佢會跟先乘除後加減 & 同埋括號先後使用次序
+  //加減乘可混合使用，另外佢會跟先乘除後加減 & 同埋括號先後使用次序
   //如果要用variable，就set完再括號內用加減乘除也可以
   int num1 = 12;
   int num2 = 4;
   int num3 = 7;
   System.out.println(num1+num2*2+(14/num3));
   //呢句就代表顯示 (12+ 4*2 + (14/7)) 既答案
-  //所以應會顯示 22    因為 12＋8＋2＝22
+  //所以顯示 22    因為 12＋8＋2＝22
   //試下計圓形面積 2pie r
   int r = 5;
   // pie 上面set好左
   System.out.println("圓形的面積 = pie r2次 = "+ (r*r*pie));
-  //擔心error可以加返個括弧
 
   //variable 既 setup 轉換
   int a = 1;   //呢一個moment a = 1
@@ -84,7 +80,7 @@ public class datatype{
   //頭先有講過 variable 由右到左，所以打完呢句後num5 既value就會由15跌落14
   num5+=2;     //一樣, 頭先因上面既num5-=1, ，而家num5係14
   //寫完num5+=2後，num5 就等於 num5 = 14+2
-  //=16 (要消化了)
+  //=16 
 
   //String 裹面有功能可以幫我地拎到 個String裹面既某D data
   //1. .length()  => 用黎搵文字既長度
@@ -98,10 +94,10 @@ public class datatype{
   String myFriend2 = "Timmy2";
   System.out.println(myFriend.equals(myFriend2)); //對比兩個係咪一樣
   //唔一樣 所以會顯示 False
-  //用黎做咩，例如一份網上考卷，答案係 "Eat",你輸入左 "Damn"
+  //即係如果一份網上考卷，答案係 "Eat",我輸入左 "Damn"
   //Programme 就可以用 xxx.equals(答案) 睇下你個答案同佢最終答案一唔一樣答返 True/False
 
-  //進階混合使用
+  //混合使用
   String letters1 = "abcd";
   String letters2 = "efgh";
   System.out.println(letters1.equals(letters2)); //由於兩個唔同字所以False
@@ -114,8 +110,8 @@ public class datatype{
 
   //3. .charAt(數字) 等幾個字母    'A'要大階啊 XD
   String letters = "abcdefghijklmnopqrstuvwxyz"; // A to Z
-  System.out.println(letters.charAt(0)); //第一個字母係 0 超重要
-  //所以如果想要最後一個字母，我地就會.charAt(25),
+  System.out.println(letters.charAt(0)); //第一個字母係 0
+  //所以如果想要最後一個字母，就會.charAt(25),
   //因為26個英文字，第一個係 0 數起，所以最後一個字母都跟住減1 係 25
   System.out.println(letters.charAt(25));
 
