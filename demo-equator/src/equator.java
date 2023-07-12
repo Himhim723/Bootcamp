@@ -15,8 +15,10 @@ public class equator{
     System.out.println(a); 
     a++;    // a=9
     System.out.println(a); //10
-    System.out.println(a--); //10
-    System.out.println(--a); //8
+    System.out.println(a--); //先print 出 a 既 value (10) 之後默默地加 1
+    //now the value of a is 9
+    System.out.println(--a); //a 既 value先減左 1 再print out value
+    //所以print out 既 value is 8
     
     a+=2; //a=a+2
     a-=2; //a=a-2

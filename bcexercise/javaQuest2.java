@@ -38,8 +38,9 @@ public class javaQuest2 {
      * Definiton of a leap year:
      * If a year is divisible by 4 and not divisible by 100 or divisible by 400,
      *           year%4==0         &&          year%100 !=0 ||   year%400 ==  0
-     * then, it is a leap year.
+     * then, it i s a leap year.
      */
+    
     int year1 = 2009;
     // Program a condition to check if it is a leap year.
     // But should NOT print anything.

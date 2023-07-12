@@ -63,6 +63,8 @@ public class Conditionals {
     }
 
     //分數評級制度 寫法一
+    //只要符合左要求就會開始 run 個個要求既 program
+    //之後既 program 一略不理會直接跳出 呢抽 if 既 conditions
     int score = 89;
     if (score >= 90){
       System.out.println("Brilliant. You got a grade A!!!");

@@ -2,7 +2,7 @@ public class LogicalOperator {
   public static void main(String[] args){
     //BOOLEAN 即係分對錯
     boolean Correct = true;
-    boolean Incorrect = false;
+    boolean Incorrect = false; 
 
     //Logical Operator
     //Logical Operator 常見等號
