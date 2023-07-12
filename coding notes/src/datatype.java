@@ -52,7 +52,7 @@ public class datatype{
   System.out.println(num1+num2*2+(14/num3));
   //呢句就代表顯示 (12+ 4*2 + (14/7)) 既答案
   //所以顯示 22    因為 12＋8＋2＝22
-  //試下計圓形面積 2pie r
+  //試下計圓形面積 pie r2次
   int r = 5;
   // pie 上面set好左
   System.out.println("圓形的面積 = pie r2次 = "+ (r*r*pie));
@@ -71,7 +71,7 @@ public class datatype{
   //如果兩個加埋會點
   //係唔會變334 因為324係文字 10係數字 
   System.out.println(num4+number);  //顯示 10324
-  //調返轉 number+num4 一樣 會先係number 324 再寫 10 => 32410
+  //調返轉 number+num4 一樣 會先係number 324 再寫 10 => 32410 yeahd 
 
   //比較特別既Operator (+=   -=   *=   /=)
   int num5 = 10;
