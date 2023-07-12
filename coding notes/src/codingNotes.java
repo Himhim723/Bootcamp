@@ -100,6 +100,22 @@ public class codingNotes {
     //先將preNum放到post, 然後preNum再獨自由亞古獸進化做機械暴龍獸 7
     System.out.println(postNum); //post 進化前既亞古獸 6
     System.out.println(preNum);  //pre 進化後既機械暴龍獸 7
+    //加加運算法/減減運算法
+    int num7 =5;
+    int num8 =10;
+    int num9 = (num7++ * num8)*2 + num7;
+    System.out.println("(num7++ * num8)*2 + num7 = ....");
+    //Step 1 處理 (num7++ * num8)
+    // num7++ 代表 num7 係陣間先理佢
+    // 而家暫時先繼續用原本既 5 黎乘 num8
+    // (5*10)=50
+    // 處理完 (num7++ * num8) 就將 num7 + 1 變 6
+    // Starting from now num7 由 5 變左 6
+    //Step 2 處理 50*2 => 100
+    //Step 3 處理 100 + num7 (3行前提及過 num7 既 value)
+    //           100 + 6
+    //           106
+    System.out.println(num9);
 
     // String 裹面有功能可以幫我地拎到 個String裹面既某D data
     // 1. .length() => 用黎搵文字既長度
@@ -142,6 +158,5 @@ public class codingNotes {
     // 都係唔得 因為charAt 係char .equals 只適用於String
     System.out.println(singer1.charAt(0) == singer2.charAt(0));
     System.out.println(singer1 == singer2);
-
   }
 }

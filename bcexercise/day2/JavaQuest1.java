@@ -1,4 +1,5 @@
-/**
+public class JavaQuest1 {
+  /**
  * Expected Output:
  * 
  * I am going to add two numbers together:
@@ -15,8 +16,6 @@
  * The variable result is 3
  */ 
 // Primitive types and operators
-public class JavaQuest1 {
-
   public static void main(String[] args) {
 
     System.out.println("I am going to add two numbers together:");
