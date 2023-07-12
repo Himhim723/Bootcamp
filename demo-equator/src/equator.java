@@ -33,11 +33,10 @@ public class equator{
     int preNum = 5;
     preNum++; //preNum=6
     int postNum=preNum++;         
-    //先將preNum放到post, 然後preNum再獨自亞古獸進化做機械暴龍獸 7
+    //先將preNum放到post, 然後preNum再獨自由亞古獸進化做機械暴龍獸 7
     System.out.println(postNum); //post 進化前既亞古獸 6
     System.out.println(preNum);  //pre 進化後既機械暴龍獸 7
     
-
     
   }
 }

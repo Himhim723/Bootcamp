@@ -1,5 +1,5 @@
 //public class 既名一定要同file名一樣
-public class datatype {
+public class codingNotes {
   // public static void main ... 係開始一個programme時必備一定要寫
   public static void main(String[] args) {
     // 要programme 顯示一D資料既magic word
@@ -8,8 +8,8 @@ public class datatype {
     // variable type//
     // variable 即係電腦既memory 只要你set好左例如成年係18歲，以後你講成年就係18歲
     // 而呢種資訊可以分為文字同數字，所以我地會有唔同既variable/data
-    /*
-     * int 數字(整數) 最常用 String 文字/句子
+    /*   Primitive Data               Reference Data
+     * int 數字(整數) 最常用            String 文字/句子 (常用)
      * byte 數字(整數) 極少用
      * short 數字(整數) 極少用
      * long 數字(整數) 超大數
@@ -86,6 +86,20 @@ public class datatype {
     // 另一種特別的Operator (++/--)
     num5++; // 變左num5 + 1
     num5--; // 變左num5 - 1
+    //但係加加 同 減減 要睇先後次序
+    int num6 = 10;
+    System.out.println(++num6);   //先加1比num6，再print out
+    //num6而家係 11
+    System.out.println(num6++);   //先print out 11 , 再加1比num6
+    //num6而家係 12
+    //另一個例子
+    int preNum = 5;
+    preNum++; //preNum=6   冇任何print out 或者 同其他data有交流
+    //所以先後次序放前放後都一樣, 就係加一
+    int postNum=preNum++;         
+    //先將preNum放到post, 然後preNum再獨自由亞古獸進化做機械暴龍獸 7
+    System.out.println(postNum); //post 進化前既亞古獸 6
+    System.out.println(preNum);  //pre 進化後既機械暴龍獸 7
 
     // String 裹面有功能可以幫我地拎到 個String裹面既某D data
     // 1. .length() => 用黎搵文字既長度
