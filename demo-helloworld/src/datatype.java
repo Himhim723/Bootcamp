@@ -3,7 +3,7 @@ public class datatype{
   //public static void main ... 係開始一個programme時必備一定要寫
   public static void main(String[] args){
     //要programme 顯示一D資料既magic word
-    System.out.println("afa"); //顯示文字必加 " "  同埋句尾必加 ; 
+    System.out.println("如果想顯示文字 要輸入 -(System.out.println( ... ))"); //顯示文字必加 " "  同埋句尾必加 ; 
 
     //variable type//
     //variable 即係電腦既memory 只要你set好左例如成年係18歲，以後你講成年就係18歲
@@ -29,7 +29,7 @@ public class datatype{
   //其實兩行咁寫同一行寫其實完全一樣
   
   //點用返D data 出黎
-  System.out.println(adultAge);   
+  System.out.println("儲存一個數字資料到Programme中 int adultAge(可隨意改名) = "+adultAge);   
   //只要寫返輸出文字既magic word 再括弧內加返variable名就可
   System.out.println("Hello, I am "+myName+". Nice to meet you!");
   //因為已set好左 myName 所以佢唔好放係 " " 裹面，if 寫裹面佢會直接打出myName
@@ -39,11 +39,11 @@ public class datatype{
   //咁我就會有 hi 我係李卓謙我今年18歲係成年人, 所以我地可用加號將所有野串連一齊
 
   //以下會係數字既運算方式
-  System.out.println(8+5); // +加
-  System.out.println(8-1); // -減
-  System.out.println(8*5); // *乘
-  System.out.println(8/2); // /除
-  System.out.println(8%3); // %餘數係咩，8除以3，餘數係2
+  System.out.println("8+5 = "+(8+5)); // +加 文字加數式 所以數式要加括號
+  System.out.println("8-1 = "+(8-1)); // -減 文字加數式 所以數式要加括號
+  System.out.println("8*5 = "+8*5); // *乘
+  System.out.println("8/2 = "+8/2); // /除
+  System.out.println("8除以3的餘數 = "+8%3); // %餘數係咩，8除以3，餘數係2
   //加減乘可混合使用，另外佢會跟先乘除後加減 & 同埋括號先後使用次序
   //如果要用variable，就set完再括號內用加減乘除也可以
   int num1 = 12;
@@ -85,14 +85,14 @@ public class datatype{
   //String 裹面有功能可以幫我地拎到 個String裹面既某D data
   //1. .length()  => 用黎搵文字既長度
   String myFriend = "Timmy";
-  System.out.println(myFriend.length());
+  System.out.println("myFriend 有多少個英文字母: "+myFriend+" 有 "+myFriend.length()+"個英文字母。");
   //佢就會顯示 Timmy 有幾多個字母
   System.out.println(myFriend);
   //顯示 Timmy
 
   //2. .equals(另一個名)  => 睇佢地一唔一樣
   String myFriend2 = "Timmy2";
-  System.out.println(myFriend.equals(myFriend2)); //對比兩個係咪一樣
+  System.out.println("myFriend 與 myFriend2 是否一樣？ "+myFriend.equals(myFriend2)); //對比兩個係咪一樣
   //唔一樣 所以會顯示 False
   //即係如果一份網上考卷，答案係 "Eat",我輸入左 "Damn"
   //Programme 就可以用 xxx.equals(答案) 睇下你個答案同佢最終答案一唔一樣答返 True/False
@@ -100,7 +100,7 @@ public class datatype{
   //混合使用
   String letters1 = "abcd";
   String letters2 = "efgh";
-  System.out.println(letters1.equals(letters2)); //由於兩個唔同字所以False
+  System.out.println("letters1 與 letters2 是否一樣? "+letters1.equals(letters2)); //由於兩個唔同字所以False
   //System.out.println(letters1.length().equals(letters2.length()));
   //                   letters1的長度    是否等於   letters2的長度
   //上面呢句唔得因為 letters1.length() 己經變左做 int
@@ -110,10 +110,11 @@ public class datatype{
 
   //3. .charAt(數字) 等幾個字母    'A'要大階啊 XD
   String letters = "abcdefghijklmnopqrstuvwxyz"; // A to Z
-  System.out.println(letters.charAt(0)); //第一個字母係 0
+  System.out.println("letters 有 "+letters.length()+" 個英文字母。");
+  System.out.println("letters 的第一個英文字母是 "+letters.charAt(0)); //第一個字母係 0
   //所以如果想要最後一個字母，就會.charAt(25),
   //因為26個英文字，第一個係 0 數起，所以最後一個字母都跟住減1 係 25
-  System.out.println(letters.charAt(25));
+  System.out.println("letters 的第一個英文字母是 "+letters.charAt(25));
 
   //.charAt 既混合使用
   String singer1 = "周杰倫";
