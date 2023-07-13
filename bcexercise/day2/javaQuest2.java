@@ -1,4 +1,4 @@
-package bcexercise;
+
 
 public class javaQuest2 {
   public static void main(String[] args){

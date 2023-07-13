@@ -7,8 +7,8 @@ public class Input {
     String name = res.nextLine();
     System.out.println("What is your age?");
     int age = res.nextInt();
-    System.out.println("Oh You are so old"+age);
-    String hello = res.nextLine();
-    System.out.println();
+    System.out.println("Oh You are so old "+age);
+    String hello = res.next();
+    System.out.println(hello);
   }
 }

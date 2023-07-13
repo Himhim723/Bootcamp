@@ -85,6 +85,86 @@ public class Loop {
     }
     System.out.println(sumOdd2);
 
+    // continue skip 左以下既 Statement
+    for (int aa=0;aa<5;aa++){
+      System.out.println("Hello");
+      if(aa == 3 ){
+        continue;               // 雖說個 continue 係 inside if {...}
+      }                         // 但會直接skip 埋以後的東西
+      System.out.println("YAHOOOOOOOO");
+    }
+
+    /*for (int a1=0; a1<10;a1++){
+      for (int a2=0;a2<10;a2++){
+        if(a2==5){
+          continue;
+        }
+        System.out.print(a1 * a2 +"     ");
+      }
+      System.out.println();
+    }*/
+System.out.println();
+    for(int aad=1;aad<10;aad++){
+      if(aad%2==0){
+        System.out.println(aad+"Hello.");
+      }
+      if (aad%3==0){
+        System.out.println(aad+"Hello");
+        System.out.println(aad+"name");
+      }
+    }
+
+System.out.println();
+    for(int aad=1;aad<10;aad++){
+      if(aad%2==0||aad%3==0){
+        System.out.println(aad+"Hello.");
+        if (aad%3==0){
+          System.out.println(aad+"name");
+        }
+      }
+    }
+
+    System.out.println();
+
+
+    for (int i=1;i<=5;i++){
+      for (int k=1;k<=i;k++){
+        System.out.print("x");
+      }
+      System.out.println();
+    }
+
+    System.out.println();
+
+    for (int a=5;a>=1;a--){
+      for (int b=1;b<=a;b++){
+        System.out.print("x");
+      }
+      System.out.println();
+    }
+
+    
+
+
+
+
+
+
+
+
+    for (int o =1;o<=3;o++){
+      System.out.print("o = "+o);
+      for (int l=1;l<=4;l++){
+        System.out.println ("l = "+l);
+      }
+      System.out.println();
+    }
+
+
+
+
+
+
 
   }
 }
