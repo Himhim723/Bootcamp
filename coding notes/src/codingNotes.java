@@ -158,5 +158,14 @@ public class codingNotes {
     // 都係唔得 因為charAt 係char .equals 只適用於String
     System.out.println(singer1.charAt(0) == singer2.charAt(0));
     System.out.println(singer1 == singer2);
+
+    //4. .compareTo()    "xxx".compareTo("xxx");
+    System.out.println("B".compareTo("A")); // 1  由 A 1個英文字後是 B
+    System.out.println("J".compareTo("C")); // 7  由 C 7個英文字後是 J
+    System.out.println("Bdfdf".compareTo("Ajhkke")); // 1  只計第一個英文字
+    System.out.println("d".compareTo("A")); //35 Why? 
+    //因為每個英文字都有個數字 而大楷既A同細階既a既數字係唔一樣
+
+    
   }
 }

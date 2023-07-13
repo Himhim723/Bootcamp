@@ -1,5 +1,10 @@
 public class equator{
   public static void main(String[] args){
+    //數學Operators (+/-/*/[/])
+    //其他 (++/--) 會分前後 放前加/減先 放後加/減後
+    // (+= / -=) 要先理解 a = b 唔係 (a 同 b 一樣) 而係 (將 b 既 value copy到 a)
+    //當理解完後，可以開始明白 += / -= 既意思
+    // += : [a = a + 1]  即係  [a += 1]
     int a = 3;
     System.out.println(a); //a=3
     a=a+1;
