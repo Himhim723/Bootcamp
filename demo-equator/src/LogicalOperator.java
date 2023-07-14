@@ -37,6 +37,8 @@ public class LogicalOperator {
     System.out.println(Question4);   // False
     if (Question4) {
       System.out.println("No ah. They both 係男的");
+    } else {
+      System.out.println("Of coz no la.");
     }
 
 

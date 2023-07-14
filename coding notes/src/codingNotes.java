@@ -143,7 +143,7 @@ public class codingNotes {
     System.out.println(letters1.length() == letters2.length()); // 顯示true
     // " == " 呢個符號係睇兩個一唔一樣, 咩type data都得
 
-    // 3. .charAt(數字) 等幾個字母 'A'要大階啊 XD
+    // 3. .charAt(數字) show第幾個字母 'A'要大階啊 XD
     String letters = "abcdefghijklmnopqrstuvwxyz"; // A to Z
     System.out.println("letters 有 " + letters.length() + " 個英文字母。");
     System.out.println("letters 的第一個英文字母是 " + letters.charAt(0)); // 第一個字母係 0
