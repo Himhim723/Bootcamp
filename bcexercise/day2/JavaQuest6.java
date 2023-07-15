@@ -10,7 +10,7 @@ public class JavaQuest6 {
     int ans=1;
     int after=1;
     int before=0;
-    for (int i=1;i<=15;i++){
+    for (int i=1;i<=15;i++){  // print 15次
       System.out.print(ans+"  ");
       ans=before+after;
       before=after;

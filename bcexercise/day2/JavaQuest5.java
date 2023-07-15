@@ -10,7 +10,7 @@
 public class JavaQuest5 {
   public static void main(String[] args) {
     String str = "Welcome to the coding bootcamp."; // You should not change this line
-    char target = 'c'; // Update this target to test the logic
+    char target = 'z'; // Update this target to test the logic
     int count = 0; 
     // Use a loop to count the target of character in a String.
     // code here
@@ -24,7 +24,7 @@ public class JavaQuest5 {
     // if not found, print "Not Found."
     // code here
     if (count > 0){
-      System.out.println("We found "+count+" character c in the String.");
+      System.out.println("We found "+count+" character "+target+" in the String.");
     } else {
       System.out.println("404 Not Found");
     }

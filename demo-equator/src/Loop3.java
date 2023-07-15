@@ -19,8 +19,8 @@ public class Loop3 {
         System.out.println("i = "+ i +"   j = "+ j);
       }
     }
-    // 0 1 2 3  4  5   6   7  8 
-    // 0 2 6 12 20 30 42  56 72 
+    // 0 1 2 3  4  5   6  7  8 
+    // 0 2 6 12 20 30 42 56 72 
     //Method 1
     int num =0;
     for (int i=1;i<=20;i++){
