@@ -11,7 +11,19 @@ public class JavaQuest8 {
     int[] nums3 = new int[] { -10, 5, 120, -100, 100, 240 }; // Second Max = 120
     int[] nums4 = new int[] { -10, 5, 100, 240, 240, 80 }; // Second Max = 240
 
+
+    for (int i=0;i<nums4.length-1;i++){
+      for (int k=i;k<nums4.length;k++){
+        if(nums4[i]>nums4[k]){
+          int sub = nums4[k];
+          nums4[k] = nums4[i];
+          nums4[i] = sub;
+        }
+      }
+    }
+    System.out.println(nums4[nums.length-2]);
+    
     // Your program should be able to handle all the above test case.
 
   }
-}
+ }
