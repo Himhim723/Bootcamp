@@ -12,6 +12,21 @@ public class JavaQuest8 {
     int[] nums4 = new int[] { -10, 5, 100, 240, 240, 80 }; // Second Max = 240
 
 
+    int max=0;
+    int sec=0;
+    for (int i=0;i<nums4.length;i++){
+      if (nums4[i]>=max){
+        sec = max;
+        max = nums4[i];
+      } else if (nums4[i]>sec){
+        sec = nums4[i];
+      }
+    }
+    System.out.println(sec);
+
+
+
+    
     for (int i=0;i<nums4.length-1;i++){
       for (int k=i;k<nums4.length;k++){
         if(nums4[i]>nums4[k]){
@@ -21,7 +36,10 @@ public class JavaQuest8 {
         }
       }
     }
-    System.out.println(nums4[nums.length-2]);
+    System.out.println(nums4[nums4.length-2]);
+
+
+
     
     // Your program should be able to handle all the above test case.
 
