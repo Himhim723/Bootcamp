@@ -61,15 +61,20 @@ public class SingleLoop {
     //    今次既工作 同我講(print) 佢出現左幾多次(count)
     //    咁係咪即係每次有一樣都要 count 1 次
     //    That's Why 我地會做   count++;   (代表搵到 1 次)
-    
-      Scanner res= new Scanner(System.in);
+/* 
+    Scanner res= new Scanner(System.in);
       int target = 89;
       int low = 0;
       int high = 100;
       for (int i = 0; i<=100;i++){
         System.out.println("Please Enter number between "+low+" and "+high);
         int ans = res.nextInt();
-        if (ans == target){
+        if (ans<=low || ans>=high){
+          System.out.println("Are you dum dum? i said "+ low +"to "+high+".");
+          low =0;
+          high = 100;
+          continue;
+        } else if (ans == target){
           System.out.println("You DEAD. You have hit the bomb.");
           break;
         } else if (ans > target) {
@@ -78,8 +83,24 @@ public class SingleLoop {
           low = ans;
         }
       }
+*/
+
+      // 1,2,3,4,5,6,7,8,9,10
       
 
+
+      /*int sum = 0;
+      for (int i=1;i<=10;i++){
+        sum += i;
+        System.out.println(sum);
+      }
+      System.out.println(sum/10);*/
+
+
+      String name = "Him";
+      if(name.equals("Him")){
+        System.out.println("Yes");
+      }
   }
   
 }
