@@ -14,7 +14,11 @@ public class StringMethod {
     //M8: .indexOf / lastIndexOf (字母 / 文字)  => Show 佢出現在第幾個字母
     //M9: .concat    
     //M10: .compareTo
+    //M11: .toString       => 將任何 data type 轉換成 String
+    //M12: .toCharArray    => 將 String
 
+
+    
     //Boolean
     //.isEmpty()           =>  是咪咩都冇
     //.isBlank()           =>  是咪咩空白 (空白同咩都冇係唔同架 諗下 Space Bar X-D)

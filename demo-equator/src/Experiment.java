@@ -1,7 +1,33 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Experiment {
+  static void Hello(){
+      System.out.println("Hello....");
+    }
   public static void main (String[] args){
+/* 
+    String word = "Hello I am Him";
+    System.out.println(word.split("H"));
+    Hello();
+    ArrayList<String> cars = new ArrayList<String>();
+    // add 新增項目 
+    // add remove get  clear  size  **set 
+    LinkedList<String> cars2 = new LinkedList<String>();
+    // add 新增項目 
+    // add remove get (First/Last())
+    HashMap<String, String> capitalCities = new HashMap<String, String>();
+    // put 新增項目
+    HashSet<String> car = new HashSet<String>();
+    // add 新增項目 
+
+
+    Iterator<String> it = cars.iterator();
+
     //幾時我既錢可以番到一倍
     Scanner res = new Scanner(System.in);
     int YearsLater=0;
@@ -38,5 +64,10 @@ public class Experiment {
       }
     }
     //
+    */
+
+    
+
+
   }
 }
