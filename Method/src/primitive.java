@@ -29,6 +29,7 @@ public class primitive {
     /*
      * Primitive 單位轉換 (Primitive data 除左 String 以外都係)
      * 單位係有細至大既分別
+     *  (Variable type) Variable
      *  Byte       
      *  Short 
      *  Int 

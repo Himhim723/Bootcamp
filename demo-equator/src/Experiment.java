@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -66,8 +67,19 @@ public class Experiment {
     //
     */
 
-    
+    String hello ="hello";
+    System.out.println(Swap(hello));
+  }
 
-
+  public static String Swap(String str){
+    char[] charA = str.toCharArray();
+    for(int i=0;i<charA.length;i++){
+      if(i%2==1){
+        char 暫存記憶 = charA[i];
+        charA[i]=charA[i-1];
+        charA[i-1]=暫存記憶;
+      }
+    }
+    return Arrays.toString(charA);
   }
 }

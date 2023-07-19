@@ -46,7 +46,7 @@ public class Array {
       // name.length //for Array 有幾個 data
       int phone[] = new int[5];
       for (int i = 0; i < phone.length; i++) {
-        System.out.println("\nPlease Enter the contack of Runner" + (i + 1));
+        System.out.println("\nPlease Enter the contact of Runner" + (i + 1));
         phone[i] = res.nextInt();
       }
 

@@ -1,54 +1,63 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
-// Input a Index Position: 3
-// Input a new Value: 120
-// Original Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
-// New Array:       [25, 14, 56, 120, 15, 36, 56, 77, 18, 29]
-//
-// Input a Index Position: 10
-// Input a new Value: 120
-// Original Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
-// New Array:       [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
-//
-// Question:
-// Insert an elements into a specific position of the array
-// The original last element should be removed accordingly
-// if the inputted index is the last index + 1, return the original array
+/**
+ * Expected Output:
+ * J
+ * e
+ * 3
+ * 9
+ * 10
+ * ab c
+ * VenturenixLAB, Coding
+ * 19
+ * ren
+ * VENTURENIXLAB, JAVA
+ * venturenixlab, java
+ * V*NTUR*NIXLAB, JAVA!!!
+ */
 public class JavaQuest9 {
-
   public static void main(String[] args) {
+    String str = "VenturenixLAB, Java";
 
-    int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
+    // prints J
+    // prints e (the 1st e)
+    // code here ...
+    System.out.println(str.charAt(str.indexOf('J')));
+    System.out.println(str.charAt(str.indexOf('e')));
+    // Use indexOf()
+    // prints 3
+    // prints 9
+    // prints 10
+    // code here ...
+    System.err.println(str.indexOf('t'));
+    System.err.println(str.indexOf('x'));
+    System.err.println(str.indexOf('L'));
 
-    Scanner input = new Scanner(System.in);
+    // Use String trim()
+    String abc = "    ab c    ";
+    // prints "ab c"
+    System.out.println(abc.trim());
+    // Use String replace() method
+    // prints VenturenixLAB, Coding
+    // code here ...
+    System.out.println(str.replace("Java","Coding"));
+    // int length()
+    // prints 19
+    // code here ...
+    System.out.println(str.length());
 
-    System.out.print("Input an index for inserting the value: ");
-    int indexPosition = input.nextInt();
+    // Use String substring(int start, int end)
+    // prints "ren"
+    // code here ...
+    System.out.println(str.substring(5, 8));
+    // print "VENTURENIXLAB, JAVA"
+    // prints "venturenixlab, java"
+    // code here ...
+    System.out.println(str.toUpperCase());
+    System.out.println(str.toLowerCase());
 
-    System.out.print("Input the value: ");
-    int newValue = input.nextInt();
+    // Method Chaining (one line to complete)
+    // prints "V*NTUR*NIXLAB, JAVA!!!"
+    // code here ...
+    System.out.println(str.toUpperCase().replace('E', '*').concat("!!!"));
 
-    System.out.println("Original Array : " + Arrays.toString(my_array));
-
-    int a = my_array[indexPosition];       //15
-    int b=my_array[indexPosition];
-    my_array[indexPosition]=newValue;  //no in for loop
-
-    
-    // code here
-    if(indexPosition!=my_array.length){
-      for (int i=indexPosition+1;i<my_array.length;i++){
-       if (i%2==0){
-         b=my_array[i];
-         my_array[i]=a;
-       } else {
-         a=my_array[i];
-         my_array[i]=b;
-       }
-      }
-    }
-
-    System.out.println("New Array: \t " + Arrays.toString(my_array));
   }
 }
