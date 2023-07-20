@@ -21,6 +21,19 @@ public class Wrapper {
     num+=num2.valueOf("90");
 
     System.out.println(num);
+
+    //autoboxing       int => Integer
+    Integer b =     (int)12;
+    //un-boxing        Integer => int
+        int a = (Integer)11;
+    //但係其實佢地係一樣既都可以混合使用
+    Integer c = a+b;
+    
+
+
+
+
+
     //即係 Wrapper Class 就係一個 Declare 既 data type
     //但係佢可以用更多既 method 幫我地處理更多問題
     // Wrapper Class 最主要就係 將 Primitive Data type 轉為大階全寫
@@ -29,9 +42,9 @@ public class Wrapper {
     // byte    =>   Byte
     // short   =>   Integer
     // int     =>   Short 
-    // long    =>   Long
-    // float   =>   Float
-    // double  =>   Double
+    // long    =>   Long           總之 long 就放 L
+    // float   =>   Float          總之 float 就放 f
+    // double  =>   Double         總之 double 就放 d
     // boolean =>   Boolean
     // Wrapper Class 最好既地方就係可以比我地更容易地使用 內置 Method  
 
@@ -48,7 +61,7 @@ public class Wrapper {
     
     
     
-
+    
 
 
   }

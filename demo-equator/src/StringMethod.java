@@ -12,6 +12,8 @@ public class StringMethod {
     //M5: .substring(x,y)  => x 係起點  y 係起點 +1 
     //                        所以 Be Aware of The Last integer
     //M6: .replace         => (由咩 字母/文字 , 變成咩 字母/文字)  字母 ''   文字 " "
+    String abcd = "Hello4 I1 Am2 Him3";
+    System.out.println(abcd.replace("Hello3","Am2"));
     //M7: .trim            => 將頭尾的空格 Delete左佢
     //M8: .indexOf / lastIndexOf (字母 / 文字)  => Show 佢出現在第幾個字母
     //M9: .concat          => 將兩何 String combine

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Expected Output:
  * J
@@ -59,5 +61,15 @@ public class JavaQuest9 {
     // code here ...
     System.out.println(str.toUpperCase().replace('E', '*').concat("!!!"));
 
+    String s = "codeleet";
+    int[] indices = new int[] {4,5,6,7,0,2,1,3};
+    char[] stro = new char[s.length()];
+        for(int i=0;i<s.length();i++){
+            stro[i]=s.charAt(indices[i]);
+        }
+        for(int k=0;k<stro.length;k++){
+          System.out.println(stro[k]);
+        }
+    System.out.println(Arrays.toString(stro));
   }
 }

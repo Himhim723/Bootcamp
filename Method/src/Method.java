@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Method{
     // 行動 Method
     /* 要引用一個 Method 就要在 public static *void* main 的外面 
@@ -68,6 +70,18 @@ public class Method{
         System.out.println("adsjfkjsab 求其啦")
        }
     */
+
+  public static int[] products (int[] arr){
+    for(int i=0;i<arr.length-1;i++){
+      arr[i]=product(arr[i], arr[i+1]);
+    }
+    return arr;
+  }
+
+
+  public static int product(int a, int b){
+    return a*b;
+  }
 
   public static void walk(){
     System.out.println("HimJai is walking");
@@ -163,5 +177,9 @@ public class Method{
     //return 荷包淨返幾多錢;
     System.out.println("HimJai 買面包後，剩餘 $"+HimJai錢包);
 
+
+    int[] nums = new int[]{1,2,6,3,6,7,8,5,4};
+    
+    System.out.println(Arrays.toString(products(nums)));
   }
 }
