@@ -19,11 +19,11 @@ public class JavaQuest14 {
 
   // Do not change anything in main method
   public static void main(String[] args) {
-    boolean res = palindrome(13431); // true
-    boolean res2 = palindrome(-121); // false
-    boolean res3 = palindrome(1); // true
-    boolean res4 = palindrome(22); // true
-    boolean res5 = palindrome(1231); // false
+    boolean res = Method2(13431); // true
+    boolean res2 = Method2(-121); // false
+    boolean res3 = Method2(1); // true
+    boolean res4 = Method2(22); // true
+    boolean res5 = Method2(1231); // false
     System.out.println(res);
     System.out.println(res2);
     System.out.println(res3);
@@ -37,19 +37,30 @@ public class JavaQuest14 {
     oldnum += num;
     char[] OldNum = oldnum.toCharArray();
     char[] NewNum = new char[oldnum.length()];
-    
     int index = 0;
     for(int i=OldNum.length-1;i>=0;i--){
       NewNum[index] = OldNum[i];
       index++; 
     }
-
     for(int i=0;i<OldNum.length;i++){
       if (OldNum[i]!=NewNum[i]){
         return false;
       }
     }
-
     return true;
   }
+
+
+
+  public static boolean Method2 (int num){
+    String oldnum = "";
+    oldnum += num;
+    for(int i=0;i<oldnum.length();i++){
+      if(oldnum.charAt(i)!=oldnum.charAt(oldnum.length()-1-i)){
+        return false;
+      }
+    }
+    return true;
+  }
+
 }

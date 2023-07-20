@@ -47,7 +47,7 @@ public class ForEach {
       System.out.println(c);   //如果 for each 入面將佢變 Wrapper Class 就可以在裡面用 Wrapper Class 既 Method
     }
 
-    String hello = "I;am;Jay;Chau;Not;Jay;Cheng";
+    String hello = "I AM ;ishdf";
     String[] str = hello.split(";");
 
     System.out.println(Arrays.toString(str));
