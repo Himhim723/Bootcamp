@@ -35,20 +35,4 @@ public class invoice {
 //    }
     System.out.println("總共： $"+Arr總計(totalPricesItems));
   }
-
- public static void 十萬伏特(){
-      System.out.println("Pika Pika");
-      System.out.println("Pika Pika");
-      System.out.println("Pika Pika");
-      System.out.println("Pika Pika");
-      System.out.println("Pika Pika");
-      System.out.println("Pika Pika");
-      System.out.println("Pika Pika");
-      System.out.println("Pika Pika");
-      System.out.println("Pika Pika");
-      System.out.println("Pika Pika");
-      System.out.println("Pika Pika");
-      
-     }
-
 }

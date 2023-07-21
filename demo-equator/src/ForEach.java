@@ -9,13 +9,13 @@ public class ForEach {
     // 3. for-each 既做法通常係用黎做比較簡單既東西。。。
 
     int[] nums = new int[] {4,1,6,2,7,3,45};
-    for (int s:nums){
-      System.out.println(s);
+    for (int sa:nums){              //For Each
+      System.out.print(sa + "    ");
     }
     
     System.out.println();
 
-    for (int i=0;i<nums.length;i++){
+    for (int i=0;i<nums.length;i++){   //For 
       System.out.println(nums[i]);
     }
 
@@ -23,8 +23,8 @@ public class ForEach {
 
     //char array
     char[] charArr = new char[] {'b','e','@','g','k'};
-    for (char s: charArr){
-      System.out.println(s);
+    for (char patrick: charArr){   //For Each
+      System.out.print(patrick);
     }
 
     System.out.println();
@@ -106,7 +106,6 @@ public class ForEach {
         words[index]=a.substring(start, a.length());
       }
     }
-      System.out.println(Arrays.toString(words));
     
   }
 }
