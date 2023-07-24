@@ -18,19 +18,17 @@ public class Person {
      this.name=Name;
      this.age=MainAge;  
      this.gender=Gender;
+
      //當係Main Created a Person 後
      //this 就係 Created Person/Object
-     // main 中 call setAge Method 
+     // main 中 call personalInfo Method 
      //將setAge()括號內既 age set入個 Created Person
+
   }
 
   public static void main(String[] args) {
     //main is just a program to run something
     // but it is not belongs to Class Person
-    Game hi = new Game();
-    hi.開口中();
-    Game.開口中();
-
 
     Scanner input = new Scanner(System.in);
     Person Team1 = new Person();
@@ -43,17 +41,13 @@ public class Person {
       System.out.println("Please enter the name of your member.");
       String name = input.next();
       Team1.teamMember[i-1]=name;
-    }
-
-
-    
-
+    }    
+    System.out.println(Arrays.toString(Team1.teamMember));
     
     Person Patrick = new Person(); // Produce Object Patrick, with default value
     Person Connie = new Person(); // Produce Object Connie, with default value
     Person Sunny = new Person();
     Person HimJai = new Person();
-    Game Him = new Game();
 
     //Save in Heap as Memory
 
@@ -65,13 +59,10 @@ public class Person {
     Connie.SelfIntroduction(Connie.name, Connie.age);
     Sunny.SelfIntroduction(Sunny.name, Sunny.age);
     HimJai.SelfIntroduction(HimJai.name, HimJai.age);
-
-    System.out.println(Arrays.toString(Team1.teamMember));
   
   // import java.util.Scanner;     
   // The items on the top is also a class 
   // Seems like
-
   // public class Scanner { ...... }
   // Scanner res = new Scanner(System.in);
   // create object res 地址

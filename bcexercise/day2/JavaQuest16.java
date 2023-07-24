@@ -41,20 +41,19 @@ public class JavaQuest16 {
   // 3. The values in the array has to be unique
   public static int[] sumToZero(int n){
     int[] arr = new int[n];
-    int sum=0;
-        do {
-        sum=0;
-        for(int i=0;i<n;i++){
-          arr[i]=new Random().nextInt(10)-5;
-            for(int k=0;k<i;k++){
-                while (arr[k]==arr[i]){
-                  arr[i]=new Random().nextInt(100)-5;
-                }
-            }
-          sum+=arr[i];
+    int sum;
+    do {
+      sum=0;
+      for(int i=0;i<n;i++){
+        arr[i]=new Random().nextInt(20)-10;
+        for(int k=0;k<i;k++){
+          while (arr[k]==arr[i]){
+            arr[i]=new Random().nextInt(20)-10;
+          }
         }
-        } while(sum!=0);
+        sum+=arr[i];
+      }
+    } while(sum!=0);
     return arr;
   }
-
 }

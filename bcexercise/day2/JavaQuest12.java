@@ -26,6 +26,41 @@ public class JavaQuest12 {
     System.out.println(Arrays.toString(answers));
     System.out.println(Arrays.toString(answers2));
     System.out.println(Arrays.toString(answers3));
+    System.out.println(Math.pow(2,5));
+
+
+    int num=9696;
+    int count=0;
+    int sub = num;
+    while (sub>=1){
+         sub/=10;
+        count++;
+    }
+    System.out.println(count);
+
+        int[] nums = new int[count];
+        int digits = count;
+        int sum=0;
+        for(int i=num;i>=1;i/=10){
+            nums[digits-1]=i%10;
+            digits--;
+        }
+        for(int i=0;i<count;i++){
+            if(nums[i]==6){
+                nums[i]=9;
+                break;
+            }
+        }
+        System.out.println(Arrays.toString(nums));
+        int index=0;
+        for(int i=count-1;i>=0;i--){
+          System.out.println(i);
+          sum+=nums[index]*Math.pow(10,i);
+          index++;
+          System.out.println(sum);
+        }
+
+
   }
 
   // Code a method here to return an array of two numbers that sum up to the

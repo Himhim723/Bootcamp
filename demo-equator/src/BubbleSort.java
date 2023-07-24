@@ -1,6 +1,18 @@
 import java.util.Arrays;
 
 public class BubbleSort {
+  public int[] insertionSort(int[]num2){
+    for(int i=0;i<num2.length-1;i++){
+      for(int k=i+1;k>0;k--){
+        if(num2[k]<num2[k-1]){
+          int temp = num2[k];
+          num2[k] = num2[k-1];
+          num2[k-1] = temp;
+        }
+      }
+    }
+    return num2;
+  }
   public static void main(String[] args){
     //BubbleSort
     int[] num = new int[]{5,3,7,1,2,0};
@@ -17,7 +29,7 @@ public class BubbleSort {
 
     //XXXSort
     int[] num2 = new int[] {3,5,70,2,1,5,62,3,32,6,2,67};
-/* 
+
     for(int i=0;i<num2.length;i++){
       for (int k=i+1;k<num2.length;k++){
         if(num2[i]>num2[k]){
@@ -27,18 +39,6 @@ public class BubbleSort {
         }
       }
     }
-*/
-    // Insertion Sort 
-    for(int i=0;i<num2.length-1;i++){
-      for(int k=i+1;k>0;k--){
-        if(num2[k]<num2[k-1]){
-          int temp = num2[k];
-          num2[k] = num2[k-1];
-          num2[k-1] = temp;
-        }
-      }
-    }
-
     System.out.println(Arrays.toString(num2));
   }
 }

@@ -2,6 +2,9 @@ import java.util.Arrays;
 
 public class StringMethod {
   public static void main(String[] args) {
+    String name = "h1e";
+    System.out.println(name.replace(name.charAt(1),(char)(name.charAt(1)+12)));
+    
     //功能性上的Method
     //M1: .charAt(number)  => Show the character
     //M2: .length()        => Show how many characters the String has

@@ -20,7 +20,7 @@ public class JavaQuest10 {
   public static void main(String[] args) {
 
     int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
-
+    
     Scanner input = new Scanner(System.in);
 
     System.out.print("Input an index for inserting the value: ");
