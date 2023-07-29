@@ -1,4 +1,4 @@
-public class invoice {
+public class invoice{
   
   public static double 單項總結 (double 單項幾錢, int 數量){
     double 單項總共幾錢 = 單項幾錢*數量;
@@ -34,5 +34,12 @@ public class invoice {
 //      sum = 總計(sum,totalPricesItems[i]);
 //    }
     System.out.println("總共： $"+Arr總計(totalPricesItems));
+    Integer a = 300;
+    Integer b = a;
+    System.out.println(a==b);
+    b+=1;
+    System.out.println(b);
+    Person him = new Person("Him",12,'m');
+    
   }
 }

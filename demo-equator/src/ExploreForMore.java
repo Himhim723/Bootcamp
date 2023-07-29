@@ -73,7 +73,17 @@ int sum =0;
 
 
 
+    String str1 = "hello";
+    String str2 = "helo";
+    str2 = new String("hello").intern();
+    String str3 = new String("hello ");
 
+    System.out.println(str1==str2);
+    System.out.println(str2==str3);
+
+
+    StringBuilder sb = new StringBuilder(str1);
+    sb.substring(TargetAge, sum);
 
 
 

@@ -16,4 +16,7 @@ public class Circle {
     double No2圓形周界 = 圓形周界計法(15.0d);
 
   }
+
+  public void setRadius(double d) {
+  }
 }

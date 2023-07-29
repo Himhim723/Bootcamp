@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class StringMethod {
   public static void main(String[] args) {
@@ -25,6 +26,8 @@ public class StringMethod {
     //M12: .toCharArray    => 將 String 變 Char Array
     //M13: String.valueOf(名)  => 將任何 data type 轉返做 String
 
+    String number1 = "2";
+    String number2 = "9";
 
     String empty = "";
     String space = " ";
@@ -40,7 +43,7 @@ public class StringMethod {
     System.out.println(empty.isBlank()); //true
     System.out.println(space.isBlank()); //true
     //.contains()          =>  有沒有 ? 字母或者 ?? 文字既出現
-    System.out.println(hello.contains("e")); //有冇字母 e 既存在 true
+    System.out.println(hello.contains("d")); //有冇字母 e 既存在 true
     System.out.println(hello.contains("q")); //有冇字母 q 既存在 false
     //.endsWith()          =>  是咪以 ? 字母或者 ?? 文字完結
     System.out.println(hello.endsWith("e")); //是咪以 字母 e 完結
@@ -56,7 +59,7 @@ public class StringMethod {
     System.out.println(hello.equals("HELLO I AM HIM"));
 
     String[] food = new String[]{"banana", "orange", "eat","mog","apple"};
-    for (int i=0;i<food.length;i++){
+    for (int i=0;i<food.length-1;i++){
       for (int k=i+1;k<food.length;k++){
         if(food[i].compareTo(food[k])>0){
           String sub = food[k];
@@ -66,6 +69,53 @@ public class StringMethod {
       }
     }
     System.out.println(Arrays.toString(food));
+
+    int[] numarr = new int[]{5,4,6,1,43,16,8,9,11};
+    for(int i=0;i<numarr.length-1;i++){
+      for(int k=i+1;k<numarr.length;k++){
+        if(numarr[i]>numarr[k]){
+          int temp = numarr[i];
+          numarr[i] = numarr[k];
+          numarr[k] = temp;
+        }
+      }
+    }
+    System.out.println(Arrays.toString(numarr));
+
+    Integer a= 777;
+    Integer b= Integer.valueOf(777);
+    System.out.println(a==b);
+
+
+//static method inside 
+//other clas can call method 
+//Class.Method()
+//but cannot use this.something
+
+//no static static
+//new Object reference
+//then can use method
+//can return this.something
+
+String s ="haaaabbba";
+HashMap<Character,Integer> store = new HashMap<>();
+        char[] arr = s.toCharArray();
+        for(char c:arr){
+            store.put(c,0);
+        }
+        for(char c:arr){
+          store.put(c,store.get(c)+1);
+        System.out.println(store.get(c));
+        }
+        System.out.println(store);
+        int[] arri = new int[store.size()];
+        int m=0;
+        for(char c:arr){
+            arr[m]=0;
+            m++;
+        }
+        System.out.println(store);
+        
 
 
     

@@ -36,16 +36,5 @@ public class Car {
   }
 
 
-  public static void main(String[] args) {
-    Number num = new Number();
-    Circle circle = new Circle();
-    Computer computer = new Computer();
-    Person Him = new Person();
-    Car HimCar = new Car(); //empty Constructor (with defaulted value)
-    Car HimCar1 = new Car(8, 16, "RED");   //all argument Constructor (with settled value)
-    
-    System.out.println(HimCar1.getWheel());
-
-    System.out.println(HimCar1.getColor());
-  }
+  
 }

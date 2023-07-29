@@ -4,45 +4,51 @@ import java.util.Scanner;
 public class Person {
   //Class is the template of the world to produce Person ???? Huh
   //How can we describe the person
-  String name;
-  int age;          
-  char gender;
-  String[] teamMember;
-  //These data are attributes to 形容 a person
+  private String name="hi";
+  private int age=0;          
+  private char gender=' ';
 
-  public void SelfIntroduction(String name, int age){
+  public Person(){
+
+  }
+
+  public Person(String name){
+    this.name = name;
+  }
+  
+  //These data are attributes to 形容 a person
+  public Person(String name,int age,char gender){
+    this.name=name;
+     this.age=age;  
+     this.gender=gender;
+  }
+
+  // public void setname(String name){
+  //   this.name=name;
+  //}
+  public static void SelfIntroduction(String name, int age){
     System.out.println("Hi, I am "+name+". I am "+age+" years old.");
   }
 
-  public void personalInfo(String Name,int MainAge, char Gender){
+  public void personalInfo(String Name,int age,char gender){
      this.name=Name;
-     this.age=MainAge;  
-     this.gender=Gender;
-
+     this.age=age;
+     this.gender=gender;
      //當係Main Created a Person 後
      //this 就係 Created Person/Object
      // main 中 call personalInfo Method 
      //將setAge()括號內既 age set入個 Created Person
+  }
 
+
+  public String getName(){
+    return this.name;
   }
 
   public static void main(String[] args) {
     //main is just a program to run something
     // but it is not belongs to Class Person
 
-    Scanner input = new Scanner(System.in);
-    Person Team1 = new Person();
-
-    System.out.println("How many members do you have in your team?");
-    int numOfMem = input.nextInt();
-    Team1.teamMember = new String[numOfMem];
-
-    for(int i = 1;i<=numOfMem;i++){
-      System.out.println("Please enter the name of your member.");
-      String name = input.next();
-      Team1.teamMember[i-1]=name;
-    }    
-    System.out.println(Arrays.toString(Team1.teamMember));
     
     Person Patrick = new Person(); // Produce Object Patrick, with default value
     Person Connie = new Person(); // Produce Object Connie, with default value

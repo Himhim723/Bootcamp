@@ -31,12 +31,12 @@ public void 開口中(){
   }while (Replay);
 }
 
-  public void 計時炸彈(){
+  public static void 計時炸彈(){
     Scanner res = new Scanner(System.in);
     String bomb="11";
     String ans="0";
     boolean die = false; 
-    System.out.println("計時炸彈");
+    System.out.println("不完整的計時炸彈");
     System.out.println("遊戲規則：每人每次順次序說出 1 - 3 個數字，說中 "+bomb+" 的人輸。");
     do{
     System.out.println("目前的數字為 "+ans+" 請說出之後的 1 至 3 個數字。");
@@ -49,28 +49,16 @@ public void 開口中(){
     } 
     }while(die==false);
     
-      System.out.println("Bomb!!! You Lose!");
-    
-      
-    
+      System.out.println("Bomb!!! You DEAD!");
   }
 
 
    public static void main(String[] args){
-      Number num = new Number();
-      Circle circle = new Circle();
-      Computer computer = new Computer();  //computer --> object references, starting the object
+      Person.SelfIntroduction("him",3);
       Person Him = new Person();
-      Car HimCar = new Car(); //empty Constructor (with defaulted value)
-      Car HimCar1 = new Car(8, 16, "RED");   //all argument Constructor (with settled value)
+      Him.personalInfo("Patrick", 2, 'r');
+      Him.SelfIntroduction(Him.getName(), 6);
       
-      System.out.println(HimCar1.getWheel());
-      System.out.println(HimCar1.getCapacity());
-      System.out.println(HimCar1.getColor());
-
-      HimCar1.setColor("Yellow");
-      System.out.println(HimCar1.getColor());
-
     
    }
   
