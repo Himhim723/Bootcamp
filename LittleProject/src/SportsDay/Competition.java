@@ -1,3 +1,4 @@
+package SportsDay;
 import java.util.Arrays;
 
 public class Competition {
@@ -192,7 +193,6 @@ public class Competition {
     Team1.setTeamMembers(new Athlete[]{Him,ABC,DEF,KAI});
     Team1.changeTeamMembers(1, PKJ);
     Team1.changeTeamMembers(0, PKJ);
-    System.out.println(Arrays.toString(Team1.getTeamMember()));
     Team1.changeTeamMembers(2, ABC);
     Team1.changeTeamMembers(3, DEF);
     
@@ -203,9 +203,9 @@ public class Competition {
     comp.setTeams(new Team[]{Team1});
     comp.setParticipants();
     comp.getIndividual400Rank();
-    System.out.println(Him.getAthID());
-    System.out.println(ABC.getAthID());
-    System.out.println(PKJ.getAthID());
+    System.out.println(Him);
+    System.out.println(ABC);
+    System.out.println(PKJ);
 
 
 

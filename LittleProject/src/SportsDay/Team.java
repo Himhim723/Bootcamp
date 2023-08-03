@@ -1,3 +1,4 @@
+package SportsDay;
 import java.util.Arrays;
 
 public class Team {
@@ -42,10 +43,6 @@ public class Team {
 
   public Athlete[] getTeamMember() {
     return this.TeamMember;
-  }
-
-  public void getTeamMemberID(){
-    for(Athlete)
   }
 
   public String toString() {

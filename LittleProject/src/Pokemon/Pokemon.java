@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Pokemon {
-  private String ownPlayer;
+  private 訓練員 ownPlayer;
   private String ID;
   private String name;
   private String describition;
@@ -27,7 +27,7 @@ public class Pokemon {
   }
 
   public Pokemon(String ID,String name,int HP, int power, int defpow,int SPow,int SDef,int Speed){
-    this.BattleSkills = new Skill[4];
+    this.BattleSkills = new Skill[4]; //Skills not yet set up
     BattleSkills[0]=new Skill("HELLO");
     BattleSkills[1]=new Skill("GOOGLE");
     BattleSkills[2]=new Skill("CHATGPT3.5");
@@ -47,6 +47,12 @@ public class Pokemon {
 
   public void setName(String name){
     this.name = name;
+  }
+  public void setOwner(訓練員 owner){
+    this.ownPlayer=owner;
+  }
+  public 訓練員 get訓練員(){
+    return this.ownPlayer;
   }
   public String getName(){
     return this.name;
@@ -78,16 +84,19 @@ public class Pokemon {
   public int getSDef(){
     return this.SDef;
   }
+  public int getSpeed(){
+    return this.Speed;
+  }
 
 
   public void Battle (Pokemon opponent){
     Scanner input = new Scanner(System.in);
     System.out.println(opponent.getName()+"出現了！");
-    boolean NotEscape = true;
-    while(NotEscape&&this.HP>0&&opponent.HP>0){
-      System.out.println(this.name+" 要做什麼：(請輸入數字操作)");
-      while(opponent.HP>0&&this.HP>0){
-      System.out.println("1: 攻擊\t2: 背包\n3: 怪獸\t4: 逃跑");
+    boolean NotEscape = true;   //逃脫時用
+    while(NotEscape&&opponent.HP>0&&!AllDead()){
+      System.out.println(ownPlayer.getPokemons()[0].getName()+" 要做什麼：(請輸入數字操作)");
+      System.out.println(ownPlayer.getPokemons()[0].getName()+" HP:"+ownPlayer.getPokemons()[0].getHP()+"\t"+opponent.getName()+" HP:"+opponent.getHP()+"\n");
+      System.out.println("1: 攻擊\t2: 好傷藥\n3: 怪獸\t4: 逃跑");
       switch(input.nextInt()){
         case 1: 
         System.out.println("請選擇技能：");
@@ -96,65 +105,153 @@ public class Pokemon {
         }
         System.out.println("5: Back to Main Menu");
         switch(input.nextInt()){
-          case 1: this.attack(opponent);
-          this.HP-=30;
+          case 1: ownPlayer.getPokemons()[0].attack(opponent);
                   break;
-          case 2: this.attack(opponent);
+          case 2: ownPlayer.getPokemons()[0].attack(opponent);
                   break;
-          case 3: this.attack(opponent);
+          case 3: ownPlayer.getPokemons()[0].attack(opponent);
                   break;
-          case 4: this.attack(opponent);
+          case 4: ownPlayer.getPokemons()[0].attack(opponent);
                   break;
           default: break;
         }
         break;
 
-        case 2: healing();
+        case 2: ownPlayer.getPokemons()[0].healing();
+                break;
 
+        case 3: SwitchPet(ownPlayer.getPokemons()[0].ownPlayer);
+                break;
 
-
-
+        case 4: if(escape()) NotEscape = false; 
+                break;
       }
+      if(opponent.HP>0)
+      opponent.OpponentTurn(ownPlayer.getPokemons()[0]);
     }
-    }
+    if(AllDead()) {
+        System.out.println("GAME OVER!!!");
+        System.out.println("Do you want to start again.");
+        if(input.next().toLowerCase().equals("yes")) {
+        this.get訓練員().setGiveUp(false);
+        } else {
+        this.get訓練員().setGiveUp(true);
+        }
+      }
+  }
+    
+   
+  
+
+  public Pokemon SwitchPet(訓練員 owner){
+    Scanner input = new Scanner(System.in);
+    System.out.println("Please Select Pokemon You Want to Use");
+    owner.showAllPokemon();
+    int choice = input.nextInt();
+    if(choice!=1&&choice<=4&&owner.getPokemons()[choice-1].HP>0){
+    Pokemon temp = owner.getPokemons()[0];
+    owner.getPokemons()[0] = owner.getPokemons()[choice-1];
+    owner.getPokemons()[choice-1] = temp;
+    } else if(choice==1){
+      System.out.println("You are using this pokemon already.");
+      SwitchPet(owner);
+    } else if (owner.getPokemons()[choice-1].HP<=0){
+      System.out.println("This Pokemon has dead. You cannot select this pokemon.");
+      SwitchPet(owner);
+    } 
+    return owner.getPokemons()[0];
     
   }
-
   
   public void attack(Pokemon Opponent){
     if(Hit()){
-      if(CriticalHit()) 
+      if(CriticalHit()) {
+      System.out.println(this.name+" 擊中了 "+Opponent.name+" 的要害。");
+      if(this.power*1.1-Opponent.defpow>0)
       Opponent.HP-=(this.power*1.1-Opponent.defpow);
+      }
       else 
+      System.out.println(this.name+" 擊中了 "+Opponent.name+" 。");
+      if(this.power-Opponent.defpow>0)
       Opponent.HP-=(this.power-Opponent.defpow);
     }
-    System.out.println(this.getName()+" HP:"+this.getHP()+"\t"+Opponent.getName()+" HP:"+Opponent.getHP()+"\n");
-    if(this.HP<=0){
-      System.out.println("You have been DEFEATED");
-    }
+    if(Opponent.HP<=0) DefeatedOpponent(Opponent);
   }
 
   public void healing(){
-    HP+=20;
-    if(HP>MaxHP) HP=MaxHP;
+    this.HP+=20;
+    if(this.HP>MaxHP) this.HP=MaxHP;
   }
 
-  public void escape(){
+  public void fullRecover(){
+    HP = MaxHP;
+  }
+
+  public void OpponentTurn(Pokemon my){
     if(Hit()){
-      System.out.println(ownPlayer);
+      if(CriticalHit()) {
+      System.out.println(this.name+" 擊中了 "+my.name+" 的要害。");
+      if(this.power*1.1-my.defpow>0) my.HP-=(this.power*1.1-my.defpow);
+      } else {
+      if(this.power-my.defpow>0) my.HP-=(this.power-my.defpow);
+      System.out.println(this.name+" 擊中了 "+my.name+" 。");
+      }
+      if(my.HP<=0){
+      System.out.println(my.getName()+" has been defeated.");
+      if(!my.AllDead()){
+      System.out.println("Your Pokemon are in danger.");
+      System.out.println("你要派出哪一隻小精靈。");
+      SwitchPet(my.ownPlayer);
+      } 
     }
+
+    } else {
+      System.out.println(this.name+" 沒有擊中 "+my.name);
+    }
+  }
+
+  public boolean AllDead(){
+    for(Pokemon team: this.get訓練員().getPokemons()){
+      if(team.HP>0) return false;
+    }
+    return true;
+  }
+  
+  public boolean escape(){
+    Random ran = new Random();
+    if((ran.nextInt(100)+1)<90){
+    System.out.println("你已成功逃脫。");
+    return true;
+    }
+    else return false;
   }
 
   public boolean Hit(){
     Random ran = new Random();
-    if((ran.nextInt(100)+1)>10) return true;
+    if((ran.nextInt(100)+1)<90) return true;
     else return false;
   }
 
   public boolean CriticalHit(){
     Random ran = new Random();
-    if((ran.nextInt(100)+1)>50) return true;
+    if((ran.nextInt(100)+1)<50) return true;
     else return false;
+  }
+
+
+  public void DefeatedOpponent(Pokemon Opponent){
+    System.out.println(Opponent.getName()+" 已被擊倒了。");
+    System.out.println("你已獲得 $20. ");
+    this.EXP+=10;
+    for(Pokemon team: this.get訓練員().getPokemons()){
+      team.EXP+=8;
+      if(team.EXP>10) System.out.println(team.getName()+" 已升級");
+    } 
+  }
+
+  @Override 
+  public String toString(){
+    return this.name;
   }
   //Create Pokemon
   //Create Player

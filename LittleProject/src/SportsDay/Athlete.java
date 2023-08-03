@@ -1,3 +1,4 @@
+package SportsDay;
 public class Athlete {
   private int AthID;
   private static int counter=1;
@@ -32,6 +33,10 @@ public class Athlete {
   @Override
   public String toString() { // At Override
     return this.name;
+  }
+
+  public static String toString(Athlete[] athletes){
+    return "YEAh";
   }
 
   public String getName() {

@@ -61,7 +61,7 @@ public class Array3 {
       Person Him = new Person("HI",3,'d');
       Car HimCar = new Car(); //empty Constructor (with defaulted value)
       Car HimCar1 = new Car(8, 16, "RED");   //all argument Constructor (with settled value)
-      Him.name="GG";
+      Him.setName("GG");
       Him.personalInfo("ASA", 99,'M');
       Him.name="GGfgfgfgfgf";
       Him.SelfIntroduction(Him.name,Him.age);

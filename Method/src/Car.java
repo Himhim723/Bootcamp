@@ -1,3 +1,5 @@
+import Crash.ObjectDemo;
+
 public class Car {
   int numOfWheel;
   int capacity;
@@ -35,6 +37,8 @@ public class Car {
     return this.color;
   }
 
-
+  public static void main(String[] args) {
+   
+  }
   
 }

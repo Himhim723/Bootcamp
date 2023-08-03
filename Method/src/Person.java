@@ -18,7 +18,7 @@ public class Person {
   
   //These data are attributes to 形容 a person
   public Person(String name,int age,char gender){
-    this.name=name;
+     this.name=name;
      this.age=age;  
      this.gender=gender;
   }
@@ -78,6 +78,9 @@ public class Person {
   // create GGG 
 
 
+  }
+
+  public void setName(String string) {
   }
 
 }
