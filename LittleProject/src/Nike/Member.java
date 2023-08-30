@@ -9,10 +9,15 @@ public class Member {
   private int phoneNum;
   private String email;
   private String password;
-  private ShoppingCart shoppingCart;
+  private ShoppingCart<? extends Product> shoppingCart;
 
   public Member(){
     //SignIn();
+    this.shoppingCart = new ShoppingCart();
+  }
+  public Member(String name){
+    this.name=name;
+    this.shoppingCart = new ShoppingCart();
   }
 
   public void SignIn(){
@@ -58,12 +63,15 @@ public class Member {
     System.out.println("\nCongratulations, You have Sign in Successfully.");
   }
 
-  public void setCart(){
-    this.shoppingCart = new ShoppingCart();
-  }
+  // public void setCart(){
+  //   this.shoppingCart = new ShoppingCart();
+  // }
 
   public ShoppingCart getCart(){
     return this.shoppingCart;
+  }
+  public void setName(String name){
+    this.name= name;
   }
   
   public String CheckProduct(Product product){
@@ -75,7 +83,10 @@ public class Member {
     sb.append("Describtion: \n"+product.getDescribtion()+"\n");
     return sb.toString();
   }
-
+  @Override
+  public String toString(){
+    return this.name;
+  }
   
 
 }

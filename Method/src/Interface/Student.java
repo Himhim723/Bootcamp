@@ -1,6 +1,8 @@
 package Interface;
 
-public class Student extends Person implements Runnable, Swimable,Move{ //class signature
+import java.util.function.Consumer;
+
+public class Student extends Person implements Runnable,Move{ //class signature
   //Why implements ??  (Interface <--> Implements)
   //differences between Extends and implements 
   //implement can implements many interface
@@ -25,22 +27,22 @@ public class Student extends Person implements Runnable, Swimable,Move{ //class 
   public void run(){
     System.out.println("Student is running.");
   }
-  @Override //implements Swimable
-  public void swim(){
-    System.out.println("Student is swimming.");
-  }
+  // @Override //implements Swimable
+  // public void swim(){
+  //   System.out.println("Student is swimming.");
+  // }
 
   public static void main(String[] args) {
-    Move move = new Student("hello");
-
-
-    Student Him = new Student("ablo");
-    
-    
     
 
-    System.out.println();
 
+    
+
+  }
+
+  @Override
+  public String toString(){
+    return this.name;
   }
   
 

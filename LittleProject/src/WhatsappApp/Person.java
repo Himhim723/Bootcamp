@@ -4,9 +4,11 @@ public class Person {
   private String name;
   private int phoneNum;
   private String status;
-  private ChatRoom group;
+  //private ChatRoom group;
   private ChatBox chatbox;
   private ChatBox[] chats;
+
+  
 
   public Person(){
 

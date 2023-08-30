@@ -1,4 +1,7 @@
 package SportsDay;
+
+import java.util.HashMap;
+
 public class Athlete {
   private int AthID;
   private static int counter=1;
@@ -7,13 +10,21 @@ public class Athlete {
   private char gender;
   private int yearOfBirth;
   private char grade;
-  private double result100;
-  private double result200;
-  private double result400;
-  private double result800;
-  private double result1500;
-  private double result5k;
-  private double result10k;
+  private HashMap<Event,Double> hmap;
+  public static void main(String[] args) {
+    Athlete Him = new Athlete("Him", 23, 'M', 1998);
+    Him.
+  }
+
+  public enum Event{
+  R100,
+  R200,
+  R400,
+  R800,
+  R1500,
+  R5000,
+  R10k;
+  }
 
   public Athlete(String name, int age, char gender, int yearOfBirth) {
     this.AthID =counter++;
@@ -21,6 +32,7 @@ public class Athlete {
     this.age = age;
     this.gender = gender;
     this.yearOfBirth = yearOfBirth;
+    this.hmap = new HashMap<>();
 
     if (this.yearOfBirth >= 1998)
       this.grade = 'A';
@@ -84,52 +96,10 @@ public class Athlete {
     this.grade = grade;
   }
 
-  public void setResult100(double result){
-    this.result100=result;
+  public void setResult (Event event, double time){
+    this.hmap.put(event, time);
   }
-  public double getResult100(){
-    return this.result100;
-  }
-
-  public void setResult200(double result){
-    this.result200=result;
-  }
-  public double getResult200(){
-    return this.result200;
-  }
-
-  public void setResult400(double result){
-    this.result400=result;
-  }
-  public double getResult400(){
-    return this.result400;
-  }
-
-  public void setResult800(double result){
-    this.result800=result;
-  }
-  public double getResult800(){
-    return this.result800;
-  }
-
-  public void setResult1500(double result){
-    this.result1500=result;
-  }
-  public double getResult1500(){
-    return this.result1500;
-  }
-
-  public void setResult5k(double result){
-    this.result5k=result;
-  }
-  public double getResult5k(){
-    return this.result5k;
-  }
-
-  public void setResult10k(double result){
-    this.result10k=result;
-  }
-  public double getResult10k(){
-    return this.result10k;
+  public double getResult (Event event){
+    return this.hmap.get(event);
   }
 }

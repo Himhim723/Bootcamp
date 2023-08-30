@@ -17,7 +17,7 @@ public class Building {
   public static void main(String[] args) {
     //Dynamic Polymorphism (Run-Time)
     Building building = new House();
-    //building.getCapacity();
+    // building.getCapacity();
     // Building is an Object of Building so it is not allowed to use method in House
     building.print();
     //building.print2();

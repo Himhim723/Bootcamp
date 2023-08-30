@@ -1,23 +1,25 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import Subject.Subjects;
+
+
 public class Student{
   private String FirstName;
   private String LastName;
   private int age;
   private char gender;
-  private int ChiGrade;
-  private int EngGrade;
-  private int MathGrade;
-  private int LSGrade;
-  private int X1Grade;
-  private int X2Grade;
-  private int X3Grade;
+  private Map<Subjects,Integer> TestResults;
+  private ArrayList<Subjects> electives;
   
-
-
   public Student(String FName,String LName,int Age, char Gender){
     this.FirstName = FName;
     this.LastName = LName;
     this.age = Age;
     this.gender =Gender;
+    this.TestResults = new HashMap<>();
+    this.electives = new ArrayList<>();
   }
 
   public boolean isAdult(){
@@ -52,6 +54,21 @@ public class Student{
     this.LastName =LName;
   }
 
-  
+  public void importScore(Subjects subjects, int score){
+    this.TestResults.put(subjects, score);
+  }
+
+  public String getResult(Subjects subject){
+    return String.valueOf(subject.getName()+" : \t"+this.TestResults.get(subject));
+  }
+
+  public static void main(String[] args) {
+    Student Him = new Student("Cheuk Him","LEE",17,'M');
+    Him.importScore(Subjects.CHI, 28);
+    Him.importScore(Subjects.ENG, 65);
+    Him.importScore(Subjects.MATH, 78);
+    Him.importScore(Subjects.LS, 81);
+    System.out.println(Him.getResult(Subjects.ENG));
+  }
 
 }

@@ -2,6 +2,7 @@ package Pokemon;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class Pokemon {
   private 訓練員 ownPlayer;
@@ -9,7 +10,7 @@ public class Pokemon {
   private String name;
   private String describition;
   private Skill[] BattleSkills;
-  private Skill[] AllBattleSkills;  
+  private Skill[] AllBattleSkills; 
   private int EXP=0;
   private int grade=1;
   private int MaxHP;
@@ -145,6 +146,8 @@ public class Pokemon {
 
   public Pokemon SwitchPet(訓練員 owner){
     Scanner input = new Scanner(System.in);
+    boolean valid = false;
+    while(!valid){
     System.out.println("Please Select Pokemon You Want to Use");
     owner.showAllPokemon();
     int choice = input.nextInt();
@@ -154,11 +157,12 @@ public class Pokemon {
     owner.getPokemons()[choice-1] = temp;
     } else if(choice==1){
       System.out.println("You are using this pokemon already.");
-      SwitchPet(owner);
+      valid = true;
     } else if (owner.getPokemons()[choice-1].HP<=0){
       System.out.println("This Pokemon has dead. You cannot select this pokemon.");
-      SwitchPet(owner);
+      valid = true;
     } 
+    }
     return owner.getPokemons()[0];
     
   }
