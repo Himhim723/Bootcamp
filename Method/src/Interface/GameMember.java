@@ -15,6 +15,7 @@ public abstract class GameMember {
   public abstract void down();
   public abstract void left();
   public abstract void right();
+  
 
 
   public int getScore(){

@@ -71,6 +71,8 @@ public class Course extends Product{
         this.timetable.add(i);
       }
     }
+    if(weekDay.contains(endDate.getDayOfWeek()))
+    this.timetable.add(endDate);
     this.quantity = count;
     }
     return this;
@@ -137,12 +139,9 @@ public class Course extends Product{
            "Coach: "+coach.getName()+"\n"+
            "Venue: "+ this.venue.getVenue()+"\n"+
            "Price: $"+ this.price +"/ lesson \n"+
-           getTimeTable();
+           getTimeTable() + 
+           "\nNumber of Lesson = " + this.timetable.size();
   }
-
-
-
-  
   
 
   public static void main(String[] args) {
@@ -151,15 +150,9 @@ public class Course extends Product{
            .setStartDate(2023, 8, 19).setEndDate(2023, 9, 30).setDay(DayOfWeek.MONDAY,DayOfWeek.FRIDAY)
            .setPrice(120.0d)
            .setTimeTable().setCoach(new Coach("Him"));
-    System.out.println(course1.getTimeTable());
-    System.out.println(course1);
-    Queue<Integer> arr = new PriorityQueue<>();
-    arr.add(3);
-    arr.add(5);
-    System.out.println(arr.poll());
-    System.out.println(arr.poll());
     
-    StringBuffer
+    System.out.println(course1);
+    
 
   }
 

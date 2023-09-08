@@ -36,6 +36,7 @@ public class Person {
     Patrick.setContact(Him);
     Angus.sendMessage(Him, "Hello I am Angus");
     Him.sendMessage(Angus, "Hello I am Him");
+    
     Him.sendMessage(Angus, "Hello How are You?");
     Angus.sendMessage(Him, "Yo what can we do tmr?");
     Him.sendMessage(Angus, "We can sleep in the lesson");

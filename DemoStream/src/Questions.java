@@ -31,7 +31,7 @@ public class Questions {
     leetcode.add(new Questions("Climbing Stairs       ", Difficulty.EASY));
 
 
-    List<String> name = leetcode.stream().filter(e-> e.difficulty == Difficulty.EASY)
+    List<String> name = leetcode.stream().filter(e-> e.difficulty == Difficulty.HARD)
     .sorted((e1,e2)-> e1.id-e2.id)
     .map(e->"\nQuestion ID:  "+e.id +" \t" +e.name+"\t Difficulty: "+e.difficulty)
     .collect(Collectors.toList());
@@ -40,10 +40,10 @@ public class Questions {
 
     long n = leetcode.stream().filter(e-> e.difficulty == Difficulty.EASY)
     .count();
+    
     System.out.println(n);
 
     
   }
-
 
 }
